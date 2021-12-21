@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>Tabla de Amortización</title>
+    <style type = "text/css">
+      body
+      {
+        background-color:#60eef3;
+        color: #000000;
+        font-family: arial;
+        font-size: 12px;
+      }
+      #boton_generar
+      {
+        background-color: skyblue;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+      }
+  #datos_tab
+  {
+    border: orange 3px solid;
+    margin:auto;
+  }
+    #amortizacion{
+      margin:auto;
+    }
+      #amortizacion  th
+        {
+          border: orange 1px solid;
+        }
+        #amortizacion_Body td
+        {
+          border: orange 1px solid;
+        }
+        #amortizacion_Body tr
+        {
+          border: orange 1px solid;
+        }
+        #titulo{
+          margin:auto;
+          text-align:center;
+        }
+
+    </style>
+  </head>
+  <body>
+    <h1 id="titulo">TABLA DE AMORTIZACIÓN METODO FRANCES<h1>
+
+      <div>
+        <table id="datos_tab">
+          <theader>
+            <tr>
+              <th>Fecha del <br>préstamo</br><input type="date" style="width:130px ; height:15px" id="fechai"></input><th>
+                <th>Plazo del <br>préstamo</br><input type="number" style="width:100px ; height:15px" id="plazo_m"></input><th>
+                  <th>Valor del<br>préstamo</br><input type="number" style="width:100px ; height:15px" id="valor_p"></input><th>
+                    <th>Tasa de<br>interés</br><input type="number" style="width:100px ; height:15px" id="tasa_int"></input><th>
+                    <th>Seguro de<br>Vida</br><input type="number" style="width:100px ; height:15px" id="seguro_v"></input><th>
+
+            </tr>
+            <tr>
+              <td colspan="2"><input type="button" style="width:100px ; height:20px" value="GENERAR" id="boton_generar"></input></td>
+              <td><input type="button" style="width:100px ; height:20px" value="BORRAR" id="boton_borrar"></input></td>
+            </tr>
+          </theader>
+        </table>
+      </div>
+
+      <p>
+      <table id="amortizacion">
+        <theader>
+          <tr>
+            <th>Fecha</th>
+            <th>N° Periodo</th>
+            <th>Saldo Inicial</th>
+            <th>Amortización</th>
+            <th>Intereses</th>
+            <th>Seguro de Vida</th>
+            <th>Cuota</th>
+            <th>Saldo Final</th>
+          </tr>
+        </theader>
+        <tbody id="amortizacion_Body">
+
+        </tbody>
+      </table>
+    </p>
+    <script src="tamortizacion.js">
+    </script>
+  </body>
+</html>
